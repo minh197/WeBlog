@@ -6,7 +6,10 @@ function App() {
   return (
     <div className="App">
       <p>Travel Blog</p>
-      <Card/>
+      <div className="card-list">
+        <Card />
+        <Card />
+      </div>
     </div>
   );
 }
