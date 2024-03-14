@@ -8,7 +8,7 @@ const NavBar = () => {
         <span className="app-name">Travel Blog</span>
       </div>
       <div className="navbar-right">
-        <a href="#" className="navbar-link">Login</a>
+        <a href="#" className="navbar-link">Log In</a>
         <a href="#" className="navbar-link">Sign Up</a>
       </div>
     </div>

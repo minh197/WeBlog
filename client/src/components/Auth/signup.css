@@ -1,30 +1,30 @@
-.signup-form-container {
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-  }
-  
-  .signup-form {
+.form-container {
+    width: 60%;
+    height: 100vh;
+    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
   
+  .signup-form {
+    /* Put the sign up form half way vertically across the form container */
+    height: calc(100% / 2); 
+  }
+  
   input[type="email"],
   input[type="password"] {
-    width: 35rem;
+    width: 95%;
     margin-bottom: 10px;
-    padding: 10px;
+    padding: 13px 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
   }
   
   button {
-    width: 36rem;
-    padding: 10px 20px;
+    width: 100%;
+    padding: 13px 0px;
     border: none;
     border-radius: 5px;
     background-color: #007bff;
@@ -34,5 +34,11 @@
   
   button:hover {
     background-color: #0056b3;
+  }
+
+  @media screen and (max-width: 500px) {
+    /* .signup-form-container {
+        width: 30%;
+    } */
   }
   
