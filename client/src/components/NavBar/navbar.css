@@ -1,0 +1,30 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    background-color: #5603AD;
+    color: white;
+  }
+  
+  .navbar-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .app-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  
+  .navbar-link {
+    color: white;
+    text-decoration: none;
+    margin: 0px 10px 0 10px;
+  }
+  
