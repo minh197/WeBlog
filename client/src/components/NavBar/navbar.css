@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px 20px;
-    background-color: black;
+    background-color: #5603AD;
     color: white;
   }
   
@@ -19,6 +19,7 @@
   
   .app-name {
     font-size: 1.5rem;
+    font-weight: 700;
   }
   
   .navbar-link {

@@ -1,15 +1,15 @@
 import React from 'react'
-import style from "./navbar.css"
+import "./navbar.css"
 
 const NavBar = () => {
   return (
     <div className="navbar">
       <div className="navbar-left">
-        <span className="app-name">Travel Blog</span>
+        <a className="app-name navbar-link" href="/">Travel Blog</a>
       </div>
       <div className="navbar-right">
-        <a href="#" className="navbar-link">Log In</a>
-        <a href="#" className="navbar-link">Sign Up</a>
+        <a href="/login" className="navbar-link">Log In</a>
+        <a href="/signup" className="navbar-link">Sign Up</a>
       </div>
     </div>
   )
