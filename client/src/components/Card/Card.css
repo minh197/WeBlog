@@ -1,16 +1,20 @@
 .card {
   display: flex !important;
-  flex-direction: row !important;
+  flex-direction: column !important;
   border-radius: 8px;
   border: 1px solid #ccc;
   padding: 8px;
   margin: 8px;
-  max-width: 360px;
+  width: calc(25% - 20px);
+  flex: 1 1 calc((25% - 20px));
 }
-.card-list {
-  justify-content: center;
-  gap: 12px;
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
 }
+
 .card-img img {
   width: 100%;
   height: auto;
