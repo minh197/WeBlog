@@ -1,6 +1,6 @@
 import React from 'react'
 import './Card.css'
-import SampleImage from './images/img-1.avif'
+import SampleImage from '../images/img-1.avif'
 const Card = () => {
   return (
     <div className="card-list">
