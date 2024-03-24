@@ -30,9 +30,7 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<LogIn />} />
       </Routes>
-      <div>
       <Card cardInfo={cardInfo}/>
-      </div>
     </div>
   );
 }
