@@ -1,6 +1,7 @@
 import React from "react";
 import "./Card.css";
 import Button from "react-bootstrap/Button";
+import {formatDate} from '../../helpers/dateConvert'
 
 const Card = ({ cardInfo }) => {
   return (
@@ -13,7 +14,7 @@ const Card = ({ cardInfo }) => {
             </div>
             <div className="card-content">
               <h2 className="m-0 p-0">{info.title}</h2>
-              <p className="date">{info.publishedAt}</p>
+              <p className="date">{formatDate(info.publishedAt)}</p>
               <p>{info.description}</p>
               <Button className="read-more" variant="primary" size="sm" active>Read More</Button>
             </div>
