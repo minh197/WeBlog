@@ -1,5 +1,6 @@
 .card {
   width: 200px;
+  height: 100%;
   margin: 10px;
   padding: 10px;
 }
@@ -8,7 +9,17 @@
   justify-content: space-around;
   flex-wrap: wrap;
 }
-
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.card-content .read-more {
+  align-self: center;
+  margin-top: auto;
+  width: 50%;
+}
 .card-img img {
   width: 100%;
   height: auto;
