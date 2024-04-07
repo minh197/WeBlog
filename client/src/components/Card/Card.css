@@ -1,32 +1,51 @@
 .card {
-  display: flex !important;
-  flex-direction: row !important;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  padding: 8px;
-  margin: 8px;
-  max-width: 360px;
+  width: 200px;
+  height: 100%;
+  margin: 10px;
+  padding: 10px;
 }
-.card-list {
-  justify-content: center;
-  gap: 12px;
+.cards-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.card-content .read-more {
+  align-self: center;
+  margin-top: auto;
+  width: 50%;
 }
 .card-img img {
   width: 100%;
   height: auto;
 }
-.card-content {
-  flex: 2;
-  padding-left: 16px;
-}
-@media screen and (max-width: 600px) {
-  .card {
-    width: 100%;
-    padding: 16px;
-    margin-bottom: 20px;
+
+@media screen and (min-width: 40em) {
+  /* Small screen - One column */
+  .card-container {
+    flex-direction: row;
   }
-  .card-content {
-    padding-top: 16px;
+  .card {
+    flex: unset;
+    width: calc(100% - 20px);
+  }
+}
+@media screen and (min-width: 40.01em) and (max-width: 59.99em) {
+  /* Medium Screens - Three Columns */
+  .card {
+    flex: 0 1 calc(33.33% - 20px); /* Calculate width for 3 columns */
+  }
+}
+
+@media screen and (min-width: 60em) {
+  /* Large Screens - Four Columns */
+  .card {
+    flex: 0 1 calc(25% - 20px); /* Calculate width for 4 columns */
   }
 }
 

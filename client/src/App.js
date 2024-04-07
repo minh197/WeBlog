@@ -4,7 +4,8 @@ import SignUp from "./components/Auth/SignUp";
 import LogIn from "./components/Auth/LogIn";
 import NavBar from "./components/NavBar/NavBar";
 import { Route, Routes } from "react-router-dom";
-import Card from "./components/Card/Card";
+import Cards from "./components/Card/Cards";
+
 
 function App() {
   return (
@@ -13,10 +14,8 @@ function App() {
       <Routes>
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<LogIn />} />
+        <Route path="/" element={<Cards/>} />
       </Routes>
-      <div>
-        <Card/>
-      </div>
     </div>
   );
 }
