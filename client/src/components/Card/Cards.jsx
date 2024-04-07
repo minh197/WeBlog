@@ -1,7 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Card from "./Card";
-const Cards = ({ cardInfo }) => {
-    console.log("this is cardInfo",cardInfo)
+import axios from "axios";
+
+const Cards = () => {
+  const [cardInfo, setCardInfo] = useState([]);
+  const apiKey = process.env.REACT_APP_API_KEY;
+  useEffect(() => {
+    (async () => {
+      try {
+        const response = await axios.get(
+          `https://newsapi.org/v2/top-headlines?country=us&category=science&apiKey=${apiKey}`
+        );
+        setCardInfo(response.data.articles);
+      } catch (error) {
+        console.error("Error fetching news", error);
+      }
+    })();
+  }, []);
   return (
     <div className="cards-container">
       {cardInfo.map((info, index) => (
