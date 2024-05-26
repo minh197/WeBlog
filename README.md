@@ -22,7 +22,7 @@ You can get a new API key from the `https://newsapi.org/` as well (or you can us
 2. To create a PostgreSQL account, run the script in your terminal: `sudo -u Postgres createuser YOURUSERNAME`. For example, you script can look like this: `sudo -u postgres createuser myname044`
 3. To verify if you have successfully created a PostgreSQL account, run `sudo -u postgres psql`. This command logs you into the PostgreSQL interface. Once you are logged in, you can list all roles (users are also called roles in PostgreSQL) with this command: `\du`. You should be able to see something like this: 
 <img width="647" alt="postgres_setup1" src="https://github.com/minh197/WeBlog/assets/61608148/1eb03f7c-700e-4434-b558-0ce0b1530926">
-
+**Note** To login to your Postgresql account using VSCode terminal, use this script `psql -U mnguyen411 -d travelblog` with `mnguyen411` being your username and `travelblog` being the database you want to connect to. It will ask for your password, prompt in your password then you are successfully logged in! 
 After you are done checking, you can exit the PostgreSQL interface by running `\q`
 
 4. To log into your PostgreSQL account, run `psql -U username`
