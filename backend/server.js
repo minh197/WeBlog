@@ -1,6 +1,6 @@
 const express = require("express")
 const cors = require("cors")
-
+const sequelize = require("./sequalize")
 const app = express(); 
 
 var corsOptions = {
@@ -19,6 +19,17 @@ app.use(express.urlencoded({ extended: true }));
 app.get("/", (req, res) => {
   res.json({ message: "Welcome to the travelblog application." });
 });
+
+// Test database connection route
+app.get("/test-connection", async (req, res) => {
+  try {
+    await sequelize.authenticate();
+    res.send("Connection has been established successfully.");
+  } catch (error) {
+    res.status(500).send("Unable to connect to the database: " + error.message);
+  }
+});
+
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
